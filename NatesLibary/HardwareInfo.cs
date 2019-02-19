@@ -60,7 +60,7 @@ namespace NatesLibary
         /// Retrieving No of Ram Slot on Motherboard.
         /// </summary>
         /// <returns></returns>
-        public static string GetNoRamSlots()
+        public static string NoRamSlots()
         {
             int MemSlots = 0;
             ManagementScope oMs = new ManagementScope();
@@ -80,7 +80,7 @@ namespace NatesLibary
         /// using the WMI class
         /// </summary>
         /// <returns>CPU Manufacturer</returns>
-        public static string GetCPUManufacturer()
+        public static string CPUManufacturer()
         {
             string cpuMan = String.Empty;
             //create an instance of the Managemnet class with the
@@ -105,7 +105,7 @@ namespace NatesLibary
         /// clock speed using the WMI class
         /// </summary>
         /// <returns>Clock speed</returns>
-        public static int GetCPUCurrentClockSpeed()
+        public static int CPUCurrentClockSpeed()
         {
             int cpuClockSpeed = 0;
             //create an instance of the Managemnet class with the
@@ -131,7 +131,7 @@ namespace NatesLibary
         /// default IP gateway using WMI
         /// </summary>
         /// <returns>adapters default IP gateway</returns>
-        public static string GetDefaultIPGateway()
+        public static string DefaultIPGateway()
         {
             //create out management class object using the
             //Win32_NetworkAdapterConfiguration class to get the attributes
@@ -187,7 +187,7 @@ namespace NatesLibary
         /// Retrieving Current Language
         /// </summary>
         /// <returns></returns>
-        public static string GetCurrentLanguage()
+        public static string CurrentLanguage()
         {
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_BIOS");
 
@@ -207,7 +207,7 @@ namespace NatesLibary
         /// Retrieving Current Language.
         /// </summary>
         /// <returns></returns>
-        public static string GetOSInformation()
+        public static string OSInformation()
         {
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT * FROM Win32_OperatingSystem");
             foreach (ManagementObject wmi in searcher.Get())
@@ -225,7 +225,7 @@ namespace NatesLibary
         /// Retrieving Processor Information.
         /// </summary>
         /// <returns></returns>
-        public static String GetProcessorInformation()
+        public static String ProcessorInformation()
         {
             ManagementClass mc = new ManagementClass("win32_processor");
             ManagementObjectCollection moc = mc.GetInstances();
@@ -242,10 +242,6 @@ namespace NatesLibary
             return info;
         }
 
-        public void TestGit()
-        {
-            return;
-        }
 
 
 

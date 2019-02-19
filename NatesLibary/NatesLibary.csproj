@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants.cs" />
     <Compile Include="GenerateSarcasm.cs" />
     <Compile Include="HardwareInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
